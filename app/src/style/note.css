@@ -1,0 +1,252 @@
+.container-note {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    min-height: 100vh;
+    background: #ffcbcb;
+
+
+}
+
+#note {
+    width: 50%;
+    height: 50%;
+    overflow-y: auto;
+    resize: none;
+}
+
+
+.input-box-note::-webkit-scrollbar {
+    width: 8px;
+}
+
+.input-box-note::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.input-box-note::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 4px;
+}
+
+.input-box-note::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+}
+
+#titleNote{
+    text-align: center;
+}
+
+.allSideBar {
+    flex: 0 0 30%;
+    min-width: 200px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    height: 85%;
+}
+
+
+.note-save, .discard-save{
+    padding: 8px 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    color: black;
+    background-color: linen;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover */
+}
+
+.note-buttons{
+  display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+.sideBar-button{
+    padding: 8px 17px;
+    border-radius: 25px;
+    font-size: 18px;
+    color: black;
+    background-color: linen;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.sideBar-button.X{
+    background: indianred;
+}
+
+.note-save:hover, .sideBar-button:hover, .discard-save:hover {
+    background-color: lightslategray; /* Darker shade on hover */
+    transform: scale(1.05); /* Larger on hover */
+}
+
+.note-save:active, .discard-save:active{
+    background-color: slategray; /* Even darker when clicked */
+    transform: scale(0.95); /*  Smaller when clicked */
+}
+
+
+
+
+.sidebar {
+    display: flex;
+    width: 100% ;
+    flex-direction: column;
+    background: seashell;
+
+}
+
+.input-box-note {
+    width: 75%;
+    min-height: 65vh; /* Use min-height instead of height to allow it to grow with content */
+    padding: 10px; /* Add some padding inside the textarea */
+    border: 1px solid #ccc; /* Add a border to the textarea */
+    border-radius: 4px; /* Optional: Add rounded corners to the textarea */
+    resize: none; /* Allows the user to resize the textarea vertically */
+    overflow-y: auto; /* Adds a scrollbar if the text is longer than the textarea */
+    line-height: 1.5; /* Adjusts the spacing between lines of text */
+    font-size: 1rem; /* Adjust the font size as needed */
+    margin-top: -20px;
+}
+
+
+
+
+.note-input-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically if there is extra space */
+    text-align: center; /* Ensures the text within the container is centered */
+    width: 100%; /* Take up 100% of the parent width */
+}
+
+.notes-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Align children elements in a column */
+    gap: 10px;
+    padding: 10px;
+}
+
+.note-item {
+    border: 1px solid black; /* Adjust color as needed */
+    padding: 10px;
+    margin-bottom: 10px; /* Adds space between notes */
+}
+
+.note-date {
+    display: inline;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left; /* Aligns the date to the top-left */
+}
+
+
+#titleNote {
+    /* Your existing styles */
+    margin-bottom: 1em; /* Add space below the title */
+}
+
+.note-form {
+    width: 100%; /* Set the form to take up 100% of its parent container */
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Align form elements in the center */
+}
+
+
+
+.note-content {
+    width: 100%; /* Adjust this as necessary */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Add ellipsis at the end of the text that doesn't fit */
+}
+
+/* Ensure that the entire pagination container is centered within its parent */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;/* Space between pagination items */
+}
+
+/* Style for pagination buttons */
+.buttonPagination {
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 0 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.buttonPagination:hover {
+    background-color: #e2e2e2;
+    border-color: #bbb;
+}
+
+
+
+.pagination-link:hover {
+    background-color: #e2e2e2;
+    border-color: #bbb;
+}
+
+.pagination-link.active {
+    color:  #5f2c82;
+    border-color: #5f2c82;
+}
+
+.active{
+    color:  #5f2c82;
+    border-color: #5f2c82;
+}
+
+.pagination-link.disabled {
+    pointer-events: none;
+    color: #999;
+    border-color: #ddd;
+    cursor: default;
+}
+
+/* Ellipsis (...) styles */
+.pagination-ellipsis {
+    padding: 8px 12px;
+    margin: 0 4px;
+    color: #333;
+}
+
+/* Style for pagination links (page numbers) */
+.buttonPag {
+    text-decoration: none;
+    padding: 2px 6px;
+    margin: 0 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    display: inline-block; /* To allow for spacing and alignment */
+}
+
+.delete{
+    margin-left: 3%;
+
+}
+
+.edit{
+    margin-left: 36%;
+}
